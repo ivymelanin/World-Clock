@@ -3,10 +3,11 @@ body{
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 .container{
+    display: block;
     max-width: 600px;
-    margin: 60 auto;
-    background: wheat;
-    padding: 20px;
+    margin: 50 auto;
+    background: whitesmoke;
+    padding: 40px;
     box-shadow: 10px 10px 10px rgba(0, 0 , 0, 0.4);
     border-radius: 20px;
 
@@ -38,7 +39,7 @@ h2{
 }
 footer{
     text-align: center;
-    font-size: 24px;
+    font-size: 18px;
     color: rgba(0, 0 , 0, 0.9);
 }
 select{
