@@ -7,25 +7,25 @@ function updateTime() {
     let currentTime = moment().tz("America/Los_Angeles");
 
     losAngelesDate.innerHTML = currentTime.format("MMMM Do YYYY");
-    losAngelesTime.innerHTML = currentTime.form("h:mm:ss [<small>]A[</small>");
+    losAngelesTime.innerHTML = currentTime.form("h:mm:ss [<small>]A[</small>]");
 
     // sydeny
     let sydney = document.querySelector("#sydney");
     let sydneyDate = sydney.querySelector(".date");
     let sydneyTime = sydney.querySelector(".time");
-    let currentTime1 = moment().tz("Australia/Sydney");
+    let currentTim = moment().tz("Australia/Sydney");
 
-    sydneyDate.innerHTML = currentTime1.format("MMMM Do YYYY");
-    sydneyTime.innerHTML = currentTime1.form("h:mm:ss [<small>]A[</small>");
+    sydneyDate.innerHTML = currentTim.format("MMMM Do YYYY");
+    sydneyTime.innerHTML = currentTim.form("h:mm:ss [<small>]A[</small>]");
 
     //new york
     let newYork = document.querySelector("#newYork");
     let newYorkDate = newYork.querySelector(".date");
     let newYorkTime = newYork.querySelector(".time");
-    let currentTime2 = moment().tz("America/New_York");
+    let currentTi = moment().tz("America/New_York");
 
-    newYorkDate.innerHTML = currentTime2.format("MMMM Do YYYY");
-    newYorkTime.innerHTML = currentTime2.form("h:mm:ss [<small>]A[</small>");
+    newYorkDate.innerHTML = currentTi.format("MMMM Do YYYY");
+    newYorkTime.innerHTML = currentTi.form("h:mm:ss [<small>]A[</small>]");
 
 }
 
