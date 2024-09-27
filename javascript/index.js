@@ -3,8 +3,8 @@ function updateTime() {
     //los angeles
     let losAngeles = document.querySelector("#losAngeles");
     if (losAngeles) {
-        let losAngelesDate = losAngeles.querySelector(".date");
-        let losAngelesTime = losAngeles.querySelector(".time");
+        let losAngelesDate = losAngeles.querySelector("#date");
+        let losAngelesTime = losAngeles.querySelector("#time");
         let currentTime = moment().tz("America/Los_Angeles");
 
         losAngelesDate.innerHTML = currentTime.format("MMMM Do YYYY");
@@ -13,8 +13,8 @@ function updateTime() {
     // sydeny
     let sydney = document.querySelector("#sydney");
     if (sydney) {
-        let sydneyDate = sydney.querySelector(".date");
-        let sydneyTime = sydney.querySelector(".time");
+        let sydneyDate = sydney.querySelector("#date");
+        let sydneyTime = sydney.querySelector("#time");
         let currentTim = moment().tz("Australia/Sydney");
 
         sydneyDate.innerHTML = currentTim.format("MMMM Do YYYY");
@@ -23,8 +23,8 @@ function updateTime() {
     //new york
     let newYork = document.querySelector("#newYork");
     if (newYork) {
-        let newYorkDate = newYork.querySelector(".date");
-        let newYorkTime = newYork.querySelector(".time");
+        let newYorkDate = newYork.querySelector("#date");
+        let newYorkTime = newYork.querySelector("#time");
         let currentTi = moment().tz("America/New_York");
 
         newYorkDate.innerHTML = currentTi.format("MMMM Do YYYY");
@@ -34,9 +34,12 @@ function updateTime() {
  
 function updateCity(event) {
     let cityTimeZone = event.target.value;
+    if (cityTimeZone === "current") {
+        cityTimeZone = moment.tz.guess();
+    }
     let cityName = cityTimeZone.replace("_", " ").split("/")[1];
     let cityTime = moment().tz(cityTimeZone);
-    let cityElement = document.querySelector(".cities");
+    let cityElement = document.querySelector("#cities");
     cityElement.innerHTML = cityTimeZone;
     cityElement = `
     <div class="city">
@@ -46,7 +49,7 @@ function updateCity(event) {
         </div>
         <div class="time">${cityTime.format("h:mm:ss")}<small>${cityTime.format("A")}</small></div>
     </div>
-    `
+    `;
 
 }
 updateTime();
