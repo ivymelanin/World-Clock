@@ -52,6 +52,7 @@ function updateCity(event) {
     `;
 
 }
+
 updateTime();
 setInterval(updateTime, 1000);
 
